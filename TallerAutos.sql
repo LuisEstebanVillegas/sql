@@ -466,7 +466,7 @@ INSERT INTO Detalle_Pedido (id_pedido, id_carro, id_accesorio) VALUES
 --========================================================================================================
 -- Consulta de verificación ------------------------------------------------------------------------------
 -- Vista general --
-
+/*
 SELECT 
     p.num_pedido,
     c.nombre_cliente,
@@ -487,9 +487,42 @@ INNER JOIN Seguro se ON p.id_seguro = se.id_seguro
 INNER JOIN Test_Drive t ON p.id_test_drive = t.id_test_drive
 INNER JOIN Transportadora tr ON p.id_transportadora = tr.id_transportadora
 ORDER BY p.num_pedido;
+*/
 
---- practica Joins -----
+-- JOINS -----------------
 
-select id_cliente,nombre_cliente,nombre_ciudad from Cliente
-join Ciudad
-on Cliente.id_cliente = Ciudad.id_ciudad
+select 
+    nombre_marca,nombre_modelo
+from Modelo
+inner join Marca on Modelo.id_modelo = Marca.id_marca
+
+--- Con alias ---------------
+select 
+    mode.nombre_modelo,
+    mar.nombre_marca
+from Modelo
+inner join Marca on Modelo.id_modelo = Marca.id_marca
+
+
+
+-- Nomnbre del vendedor que ha realizado pedidos con un descuento del 10%
+
+select precio_base
+from Carro
+where sum(precio_base * 0.1) = descuento;
+select 
+    *
+
+from Vendedor
+inner join Carro on Vendedor.id_vendedor = Carro.id_carro
+
+SELECT 
+nombre_vendedor
+FROM Vendedor, Carro
+INNER JOIN Pedido ON Vendedor.id_vendedor = Pedido.id_vendedor
+inner join  on Pedido.num_pedido = Carro.id_carro
+WHERE Carro.descuento = 0.10;
+
+
+
+-- Obtener los email de los clientes que adquirieron Toyota
