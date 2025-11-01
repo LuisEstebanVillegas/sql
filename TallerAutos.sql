@@ -487,3 +487,9 @@ INNER JOIN Seguro se ON p.id_seguro = se.id_seguro
 INNER JOIN Test_Drive t ON p.id_test_drive = t.id_test_drive
 INNER JOIN Transportadora tr ON p.id_transportadora = tr.id_transportadora
 ORDER BY p.num_pedido;
+
+--- practica Joins -----
+
+select id_cliente,nombre_cliente,nombre_ciudad from Cliente
+join Ciudad
+on Cliente.id_cliente = Ciudad.id_ciudad
