@@ -1,0 +1,36 @@
+-- Base de Datos TallerAutos --
+
+--Listar todos los clientes ordenados alfabéticamente
+-- Contar el total de carros en inventario
+-- Obtener el precio promedio de los carros
+-- Encontrar el carro más caro
+-- Encontrar el carro más barato
+-- Listar marcas ordenadas por año de fundación
+-- Contar cuántos clientes hay por tipo de documento
+-- Sumar el valor total de todos los pedidos
+-- Obtener estadísticas básicas de precios
+-- Contar carros por estado
+-- Carros con información de su modelo
+-- Contar pedidos por cliente
+-- Carros por marca ordenados por precio
+-- Ventas totales por vendedor
+-- Ciudades con cantidad de clientes
+-- Precio promedio por marca
+-- Clientes con y sin pedidos
+-- Modelos con y sin ventas
+-- Carros disponibles por categoría
+-- Ventas mensuales de cada vendedor
+-- Top 5 clientes por gasto
+-- Análisis de descuentos aplicados
+-- Carros por color y transmisión
+-- Ciudades con mayor volumen de ventas
+-- Marcas con precio promedio por categoría
+-- Análisis de entregas por transportadora
+-- Todos los colores aunque no tengan carros
+-- Análisis de financiamiento por banco
+-- Clientes por ciudad con análisis de compra
+-- Modelos más vendidos por categoría
+-- Listar el inventario completo con todas las especificaciones técnicas y de origen.
+-- Rastrear el estado de cada entrega con información del cliente, ubicación destino y transportadora
+-- Identificar qué tipos de carros prefiere cada segmento de clientes según su ubicación.
+-- Analizar qué métodos de pago se usan más en cada sucursal y su impacto en ventas.
