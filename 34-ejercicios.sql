@@ -6,7 +6,7 @@
 --5 Encontrar el carro más barato
 --6 Listar marcas ordenadas por año de fundación
 --7 Contar cuántos clientes hay por tipo de documento
---8 Sumar el valor total de todos los pedidos
+--8 Sumar el valor total de todos los pedidos -
 --9 Obtener estadísticas básicas de precios
 --10 Contar carros por estado
 --11 Carros con información de su modelo
@@ -18,7 +18,7 @@
 --17 Clientes con y sin pedidos
 --18 Modelos con y sin ventas
 --19 Carros disponibles por categoría
---20 Ventas mensuales de cada vendedor
+--20 Ventas mensuales de cada vendedor -
 --21 Top 5 clientes por gasto
 --22 Análisis de descuentos aplicados
 --23 Carros por color y transmisión
@@ -28,7 +28,7 @@
 --27 Todos los colores aunque no tengan carros
 --28 Análisis de financiamiento por banco
 --29 Clientes por ciudad con análisis de compra
---30 Modelos más vendidos por categoría
+--30 Modelos más vendidos por categoría -
 --31 Listar el inventario completo con todas las especificaciones técnicas y de origen.
 --32 Rastrear el estado de cada entrega con información del cliente, ubicación destino y transportadora
 --33 Identificar qué tipos de carros prefiere cada segmento de clientes según su ubicación.
@@ -153,3 +153,21 @@ FROM Carro
 join Modelo on Modelo.id_modelo = Carro.id_modelo
 LEFT JOIN Detalle_Pedido ON Carro.id_carro = Detalle_Pedido.id_carro
 GROUP BY Modelo.nombre_modelo;
+
+--19 Carros disponibles por categoría
+SELECT 
+	id_carro,
+	nombre_categoria
+FROM Carro
+left join Categoria_Carro on Categoria_Carro.id_categoria = Carro.id_categoria
+
+--20 Ventas mensuales de cada vendedor
+SELECT 
+	Vendedor.id_vendedor,
+	nombre_vendedor,
+	COUNT(num_pedido) as pedidos_mensuales
+FROM Pedido
+LEFT join Vendedor on Vendedor.id_vendedor = Pedido.id_vendedor
+
+SELECT *
+from Pedido
